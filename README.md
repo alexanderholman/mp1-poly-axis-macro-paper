@@ -11,7 +11,7 @@ Macro coordination repository for the MP1 paper program on poly-axis grain-bound
 ## Getting started
 
 - Read `plan.md` (micro) or `plan_micro_papers.md` (macro).
-- Review `tasks/wip.md` and `tasks/triage.md` for current execution state.
+- Read `WIP.md` for immediate status, then `tasks/wip.md` and `tasks/triage.md` for detailed state.
 - Follow setup notes in `INSTALL.md`.
 
 ## AgentFactory
