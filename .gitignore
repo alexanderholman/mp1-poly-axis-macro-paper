@@ -369,3 +369,8 @@ Icon
 Network Trash Folder
 Temporary Items
 .apdisk
+
+# MP1 project policy: keep heavy legacy artifacts out of macro repo history
+legacy_full_investigate_strain/
+legacy_import/
+paper/
