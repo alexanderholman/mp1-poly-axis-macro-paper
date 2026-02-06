@@ -184,3 +184,22 @@ Notes:
 
 - Completed migration-plan absolute-path audit item with `absolute_path_audit.md`.
 - Confirmed only one executable hard-coded absolute path in optional VTST stack.
+
+### 2026-02-06 (operational reference)
+
+- Added `command_matrix.md` as an execution-safe command matrix for active tool groups.
+- Captured command-level inputs/outputs/dependencies/failure modes for faster recovery in future sessions.
+
+### 2026-02-06 (first implementation target defined)
+
+- Defined first concrete fix target in `first_fix_target_artemis_root_decoupling.md`.
+- Locked Sprint-1 scope to root/path decoupling with explicit acceptance and verification checklist.
+
+### 2026-02-06 (Sprint 1 implementation)
+
+- Implemented Artemis root/path decoupling in `legacy_full_investigate_strain/tools/artemis_utilities/`.
+- Added shared resolver: `scripts/pathing.py`.
+- Added manager-level path options (`--root`, `--interfaces-dir`, `--run-root-mlp`, `--run-root-dft`) and propagated to setup/run/cleanup flows.
+- Added safety guards for cleanup/operations against missing interfaces paths and filesystem-root target.
+- Added resolved-path logging before mutation/submission actions.
+- Performed syntax validation (`python -m py_compile`) and basic runtime checks for new CLI/help/guards.

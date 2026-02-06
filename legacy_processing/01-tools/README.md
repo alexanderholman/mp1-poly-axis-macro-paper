@@ -18,6 +18,7 @@ This phase defines how legacy tooling is stabilized and mapped into MP1 micro-pa
 - `canonical_source_decision.md`: canonical tools-tree decision and rationale.
 - `ownership_status.md`: current owner/scope/status map for each top-level tool group.
 - `interface_contracts_detailed.md`: command-level contracts for active tool groups.
+- `command_matrix.md`: operational command-by-command execution reference.
 - `path_assumptions_audit.md`: hard-coupled path assumptions and normalization priorities.
 - `absolute_path_audit.md`: hard-coded absolute-path findings.
 - `external_dependency_policy.md`: policy/checklist for Bader and VTST external dependencies.
@@ -25,3 +26,4 @@ This phase defines how legacy tooling is stabilized and mapped into MP1 micro-pa
 - `progload_scope_decision.md`: MP1 scope and activation criteria for Progload.
 - `data_contract_plan.md`: schema/provenance contract for key analysis outputs.
 - `mp_toolchain_mapping.md`: required vs optional tool map across MP1.1-MP1.9.
+- `first_fix_target_artemis_root_decoupling.md`: first implementation target and acceptance criteria.
