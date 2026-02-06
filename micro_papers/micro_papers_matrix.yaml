@@ -1,0 +1,78 @@
+project: MP1
+material: Si
+status: active
+
+protocols:
+  literature_reproduction: Protocol L
+  supers_production: Protocol S
+
+models:
+  bi_axis:
+    - box
+    - saw
+  poly_axis_capable:
+    - island
+    - checker
+
+micro_papers:
+  - id: MP1.1
+    slug: sigma3-112-reproduction
+    focus: literature reproduction
+    axis_scope: single-axis
+    status: pending
+
+  - id: MP1.2
+    slug: sigma3-111-reproduction
+    focus: literature reproduction
+    axis_scope: single-axis
+    status: pending
+
+  - id: MP1.3
+    slug: protocol-transfer-supers-settings
+    focus: method standardization
+    axis_scope: all
+    status: pending
+
+  - id: MP1.4
+    slug: single-axis-111-112-protocol-s
+    focus: baseline generation
+    axis_scope: single-axis
+    status: pending
+
+  - id: MP1.5
+    slug: dual-axis-model-comparison
+    focus: core novelty
+    axis_scope: dual-axis
+    models:
+      - box
+      - saw
+      - island
+      - checker
+    status: pending
+
+  - id: MP1.6
+    slug: three-axis-extension-110-111-112
+    focus: poly-axis extension
+    axis_scope: three-axis
+    models:
+      - island
+      - checker
+    status: pending
+
+  - id: MP1.7
+    slug: defect-campaign-across-axis-complexity
+    focus: defects
+    axis_scope: all
+    status: pending
+
+  - id: MP1.8
+    slug: synthesis-manuscript-assembly
+    focus: integration
+    axis_scope: all
+    status: pending
+
+  - id: MP1.9
+    slug: electron-microscopy-structure-validation
+    focus: experiment-match validation
+    axis_scope: dual-axis
+    status: pending

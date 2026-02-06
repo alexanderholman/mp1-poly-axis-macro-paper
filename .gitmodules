@@ -1,0 +1,36 @@
+[submodule "micro_papers/mp1.1-sigma3-112-reproduction"]
+	path = micro_papers/mp1.1-sigma3-112-reproduction
+	url = git@github.com:alexanderholman/mp1-1-sigma3-112-repro.git
+	branch = master
+[submodule "micro_papers/mp1.2-sigma3-111-reproduction"]
+	path = micro_papers/mp1.2-sigma3-111-reproduction
+	url = git@github.com:alexanderholman/mp1-2-sigma3-111-repro.git
+	branch = master
+[submodule "micro_papers/mp1.3-protocol-transfer-supers-settings"]
+	path = micro_papers/mp1.3-protocol-transfer-supers-settings
+	url = git@github.com:alexanderholman/mp1-3-protocol-transfer-supers-settings.git
+	branch = master
+[submodule "micro_papers/mp1.4-single-axis-111-112-protocol-s"]
+	path = micro_papers/mp1.4-single-axis-111-112-protocol-s
+	url = git@github.com:alexanderholman/mp1-4-single-axis-111-112-protocol-s.git
+	branch = master
+[submodule "micro_papers/mp1.5-dual-axis-model-comparison"]
+	path = micro_papers/mp1.5-dual-axis-model-comparison
+	url = git@github.com:alexanderholman/mp1-5-dual-axis-model-comparison.git
+	branch = master
+[submodule "micro_papers/mp1.6-three-axis-extension-110-111-112"]
+	path = micro_papers/mp1.6-three-axis-extension-110-111-112
+	url = git@github.com:alexanderholman/mp1-6-three-axis-110-111-112-extension.git
+	branch = master
+[submodule "micro_papers/mp1.7-defect-campaign-across-axis-complexity"]
+	path = micro_papers/mp1.7-defect-campaign-across-axis-complexity
+	url = git@github.com:alexanderholman/mp1-7-defect-campaign-axis-complexity.git
+	branch = master
+[submodule "micro_papers/mp1.8-synthesis-manuscript-assembly"]
+	path = micro_papers/mp1.8-synthesis-manuscript-assembly
+	url = git@github.com:alexanderholman/mp1-8-synthesis-manuscript-assembly.git
+	branch = master
+[submodule "micro_papers/mp1.9-electron-microscopy-structure-validation"]
+	path = micro_papers/mp1.9-electron-microscopy-structure-validation
+	url = git@github.com:alexanderholman/mp1-9-em-structure-validation.git
+	branch = master
