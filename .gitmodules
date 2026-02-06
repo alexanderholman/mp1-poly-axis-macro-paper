@@ -34,3 +34,7 @@
 	path = micro_papers/mp1.9-electron-microscopy-structure-validation
 	url = git@github.com:alexanderholman/mp1-9-em-structure-validation.git
 	branch = master
+[submodule "vendor/mp1-tools"]
+	path = vendor/mp1-tools
+	url = git@github.com:alexanderholman/mp1-tools.git
+	branch = master

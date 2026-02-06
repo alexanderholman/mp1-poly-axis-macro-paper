@@ -203,3 +203,9 @@ Notes:
 - Added safety guards for cleanup/operations against missing interfaces paths and filesystem-root target.
 - Added resolved-path logging before mutation/submission actions.
 - Performed syntax validation (`python -m py_compile`) and basic runtime checks for new CLI/help/guards.
+
+### 2026-02-06 (tools migration kickoff, Option 3)
+
+- Created `alexanderholman/mp1-tools` from template.
+- Implemented Phase 1 package scaffold with `mp1-id` and `mp1-energies` CLIs.
+- Added macro repo dev submodule at `vendor/mp1-tools` and pinned lock file `mp1_tools.lock`.
