@@ -27,3 +27,5 @@ This phase defines how legacy tooling is stabilized and mapped into MP1 micro-pa
 - `data_contract_plan.md`: schema/provenance contract for key analysis outputs.
 - `mp_toolchain_mapping.md`: required vs optional tool map across MP1.1-MP1.9.
 - `first_fix_target_artemis_root_decoupling.md`: first implementation target and acceptance criteria.
+- `tools_migration_plan.md`: plan for extracting legacy tools into `mp1-tools` repo.
+- `tools_migration_work_order.md`: commit-sized execution checklist for the migration.
