@@ -374,3 +374,7 @@ Temporary Items
 legacy_full_investigate_strain/
 legacy_import/
 paper/
+
+# Local continuity memory artifacts (do not track)
+actions/
+memory/

@@ -5,7 +5,10 @@
 - `legacy_import/tools/`
 - `legacy_full_investigate_strain/tools/`
 
-Both locations currently expose the same top-level tool groups.
+Parity check result:
+
+- Trees are functionally equivalent at top and file level.
+- Observed difference: `legacy_full_investigate_strain/tools/progload/.git` exists (embedded git metadata).
 
 ## Top-level inventory
 
@@ -18,6 +21,43 @@ Both locations currently expose the same top-level tool groups.
 - `bader` - external compiled binary (Bader analysis)
 - `bader_src/` - source/build materials for Bader binary
 - `vtstscripts-1039/` - external VTST scripts bundle
+
+## Entry-point overview
+
+- `artemis_utilities/run.py`
+  - Role: orchestration manager for setup/run/cleanup jobs across `DINTERFACES/`
+  - Dependencies: `rsync`, `sbatch` (Slurm), template files in `artemis_utilities/common/`
+
+- `vasp_utilities/run.py`
+  - Role: local VASP input generation pipeline (`POTCAR`, `NBANDS/NELECT`, `INCAR`, `KPOINTS`)
+  - Dependencies: local pseudopotential tree `vasp_utilities/common/POTCARS/`
+
+- `task_utilities/run.py`
+  - Role: intended manager entrypoint
+  - Current state: empty; actual functionality is split under `task_utilities/scripts/`
+
+- `id_utilities/run.py`
+  - Role: layer-wise atom indexing/visualization from POSCAR/.vasp files
+  - Outputs: per-axis PNG and JSON exports + printed atom ID/layer summaries
+
+## High-value scripts already identified
+
+- `task_utilities/scripts/analyse/energies.py`
+  - Provenance-aware energy extraction (`vasprun.xml`/`OUTCAR`) with setup hashing
+  - Likely source for existing `energies.json` artifacts in legacy calc trees
+
+- `task_utilities/scripts/prepare/calc/generate_band_kpoints.py`
+  - Band-structure KPOINTS generation for bulk/surface/interface classes
+
+- `artemis_utilities/common/concat_artemis_data.py`
+  - Interface metadata collation (`shift_vals.txt`, `struc_dat.txt`) into `poscar_data.json`
+
+## Structural coupling observations
+
+- Several tools assume execution from a root containing `DINTERFACES/`.
+- Slurm submission scripts assume local scheduler availability and account/project settings.
+- Job templates include `{name}` placeholders while setup scripts currently format with `{lm}`/`{um}`.
+
 
 ## Classification
 

@@ -13,3 +13,5 @@ This phase defines how legacy tooling is stabilized and mapped into MP1 micro-pa
 - `inventory.md`: current tool inventory and classification.
 - `migration_plan.md`: stepwise migration and validation plan.
 - `execution_checklist.md`: session-safe checklist for job-by-job progress and handoff.
+- `context_snapshot_YYYY-MM-DD.md`: dated analysis snapshots for fast session restore.
+- `tool_contracts.md`: draft interfaces for each top-level tool group.
