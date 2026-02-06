@@ -78,3 +78,8 @@ Parity check result:
 - Duplication across `legacy_import` and `legacy_full_investigate_strain` can cause drift.
 - External binaries/scripts may be version-stale and undocumented.
 - Some scripts may rely on hard-coded legacy absolute paths.
+
+Absolute-path check note:
+
+- Core active scripts are mostly free of hard-coded local absolute paths.
+- One hard-coded absolute default path is present in optional VTST tooling (`automagician.py`).

@@ -8,7 +8,7 @@ Move from duplicated legacy tool trees to one documented, reproducible toolchain
 
 - Choose one source tree as canonical (`legacy_full_investigate_strain/tools/` recommended).
 - Freeze the non-canonical copy as read-only reference.
-- Record this decision in `decisions.md`.
+- Record this decision in `canonical_source_decision.md` (and optionally mirror in `decisions.md`).
 
 ## Step 2 - Normalize tool categories
 
@@ -49,7 +49,7 @@ Move from duplicated legacy tool trees to one documented, reproducible toolchain
 
 ## First execution tasks
 
-- [ ] Decide canonical tool source directory.
-- [ ] Produce ownership/status table for each top-level tool group.
-- [ ] Identify all scripts that reference absolute legacy paths.
-- [ ] Draft install notes for Bader and VTST dependencies.
+- [x] Decide canonical tool source directory.
+- [x] Produce ownership/status table for each top-level tool group.
+- [x] Identify all scripts that reference absolute legacy paths.
+- [x] Draft install notes for Bader and VTST dependencies.

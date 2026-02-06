@@ -18,21 +18,21 @@ Rule: this file is planning/tracking only. No code changes are required to compl
 ## 1) Canonical source lock
 
 ### Job T01 - Choose canonical tools tree
-- [ ] Decide canonical source: `legacy_full_investigate_strain/tools/` (recommended) or `legacy_import/tools/`.
-- [ ] Record rationale and decision date.
-- [ ] Mark non-canonical tree as reference-only in docs.
+- [x] Decide canonical source: `legacy_full_investigate_strain/tools/` (recommended) or `legacy_import/tools/`.
+- [x] Record rationale and decision date.
+- [x] Mark non-canonical tree as reference-only in docs.
 
 ### Job T02 - Verify parity against reference tree
-- [ ] Compare top-level directories in canonical vs reference tree.
-- [ ] Record any mismatches (missing dirs/files, version differences).
-- [ ] Decide whether mismatches are intentional or need reconciliation.
+- [x] Compare top-level directories in canonical vs reference tree.
+- [x] Record any mismatches (missing dirs/files, version differences).
+- [x] Decide whether mismatches are intentional or need reconciliation.
 
 ---
 
 ## 2) Ownership and status mapping
 
 ### Job T03 - Ownership table (top-level)
-- [ ] Assign owner/status for each top-level tool group:
+- [x] Assign owner/status for each top-level tool group:
   - `artemis_utilities`
   - `vasp_utilities`
   - `task_utilities`
@@ -41,57 +41,57 @@ Rule: this file is planning/tracking only. No code changes are required to compl
   - `C-QM`
   - `bader` / `bader_src`
   - `vtstscripts-1039`
-- [ ] Status values: active, optional, deprecated, external-vendor, unknown.
+- [x] Status values: active, optional, deprecated, external-vendor, unknown.
 
 ### Job T04 - Interface contract inventory
-- [ ] For each active group, document entrypoints and expected inputs/outputs.
-- [ ] Note required runtime dependencies (ASE, pymatgen, Slurm, rsync, etc.).
-- [ ] Note required directory assumptions (e.g., `DINTERFACES/`).
+- [x] For each active group, document entrypoints and expected inputs/outputs.
+- [x] Note required runtime dependencies (ASE, pymatgen, Slurm, rsync, etc.).
+- [x] Note required directory assumptions (e.g., `DINTERFACES/`).
 
 ---
 
 ## 3) External dependency policy
 
 ### Job T05 - Bader policy
-- [ ] Record preferred installation route (binary vs build from `bader_src`).
-- [ ] Record version pinning/checksum expectations.
-- [ ] Record license/citation requirements.
+- [x] Record preferred installation route (binary vs build from `bader_src`).
+- [x] Record version pinning/checksum expectations.
+- [x] Record license/citation requirements.
 
 ### Job T06 - VTST policy
-- [ ] Record expected VTST version and source.
-- [ ] Record activation method (PATH/module/wrapper).
-- [ ] Record scope for MP1 (which scripts are in-scope vs out-of-scope).
+- [x] Record expected VTST version and source.
+- [x] Record activation method (PATH/module/wrapper).
+- [x] Record scope for MP1 (which scripts are in-scope vs out-of-scope).
 
 ### Job T07 - Progload policy
-- [ ] Decide whether Progload is required for MP1 active workflow.
-- [ ] If required, document build and runtime procedure.
-- [ ] If optional/deprecated, mark as reference-only.
+- [x] Decide whether Progload is required for MP1 active workflow.
+- [x] If required, document build and runtime procedure.
+- [x] If optional/deprecated, mark as reference-only.
 
 ---
 
 ## 4) Workflow hardening plan (documentation only in this phase)
 
 ### Job T08 - Path assumptions audit plan
-- [ ] List scripts with hard-coded path assumptions.
-- [ ] Define future normalization strategy (config/env/CLI arguments).
-- [ ] Prioritize fixes by MP impact.
+- [x] List scripts with hard-coded path assumptions.
+- [x] Define future normalization strategy (config/env/CLI arguments).
+- [x] Prioritize fixes by MP impact.
 
 ### Job T09 - CLI consistency plan
-- [ ] Define target CLI style for managed utilities.
-- [ ] Identify missing/empty CLI entrypoints (e.g., `task_utilities/run.py`).
-- [ ] Define acceptance criteria for "ready" CLI wrappers.
+- [x] Define target CLI style for managed utilities.
+- [x] Identify missing/empty CLI entrypoints (e.g., `task_utilities/run.py`).
+- [x] Define acceptance criteria for "ready" CLI wrappers.
 
 ### Job T10 - Data contract plan
-- [ ] Define stable schema references for key outputs (`energies.json`, Bader exports, DOS outputs).
-- [ ] Define provenance requirements (input hashes/setup IDs).
-- [ ] Define where schema docs will live.
+- [x] Define stable schema references for key outputs (`energies.json`, Bader exports, DOS outputs).
+- [x] Define provenance requirements (input hashes/setup IDs).
+- [x] Define where schema docs will live.
 
 ---
 
 ## 5) MP mapping and minimum viable toolchain
 
 ### Job T11 - MP critical path mapping
-- [ ] Map exact required tools to each MP stage:
+- [x] Map exact required tools to each MP stage:
   - MP1.1
   - MP1.2
   - MP1.3
@@ -101,12 +101,12 @@ Rule: this file is planning/tracking only. No code changes are required to compl
   - MP1.7
   - MP1.8
   - MP1.9
-- [ ] Mark each dependency as required vs optional.
+- [x] Mark each dependency as required vs optional.
 
 ### Job T12 - Minimal reproducible stack definition
-- [ ] Define smallest tool subset needed to execute MP1.1 and MP1.2 end-to-end.
-- [ ] Define extension subset needed for MP1.5/MP1.6/MP1.7.
-- [ ] Define acceptance checklist for "toolchain ready".
+- [x] Define smallest tool subset needed to execute MP1.1 and MP1.2 end-to-end.
+- [x] Define extension subset needed for MP1.5/MP1.6/MP1.7.
+- [x] Define acceptance checklist for "toolchain ready".
 
 ---
 
@@ -159,3 +159,28 @@ Notes:
 - Added `context_snapshot_2026-02-06.md` for fast session restore.
 - Verified near-parity between `legacy_full.../tools/` and `legacy_import.../tools/`.
 - Flagged immediate follow-up priorities: `T01` canonical lock and template placeholder reconciliation.
+
+### 2026-02-06 (processing start)
+
+- Completed `T01`: canonical source locked to `legacy_full_investigate_strain/tools/`.
+- Completed `T02`: parity verified with metadata-level exception in `progload/.git`.
+- Completed `T03` baseline: ownership/status map created in `ownership_status.md`.
+
+### 2026-02-06 (delegated analysis pass)
+
+- Completed `T04` using delegated module-by-module analysis and documented details in `interface_contracts_detailed.md`.
+- Completed `T08` with `path_assumptions_audit.md` (assumptions, normalization strategy, priority queue).
+- Added consolidated contract/risk updates to `inventory.md` and retained restore context in dated snapshot files.
+
+### 2026-02-06 (policy + mapping pass)
+
+- Completed `T05` and `T06` with `external_dependency_policy.md`.
+- Completed `T07` with `progload_scope_decision.md`.
+- Completed `T09` with `cli_consistency_plan.md`.
+- Completed `T10` with `data_contract_plan.md`.
+- Completed `T11` and `T12` with `mp_toolchain_mapping.md`.
+
+### 2026-02-06 (absolute path verification)
+
+- Completed migration-plan absolute-path audit item with `absolute_path_audit.md`.
+- Confirmed only one executable hard-coded absolute path in optional VTST stack.
