@@ -10,7 +10,7 @@ This is an execution checklist where each numbered block is intended to land as 
 0.1 Decide names/paths
 - [ ] Confirm tools repo name: `alexanderholman/mp1-tools`
 - [ ] Confirm macro dev submodule path: `vendor/mp1-tools`
-- [ ] Confirm per-repo lock file name: `mp1_tools.lock`
+- [ ] Confirm per-repo lock file name: `mlp_tools.lock`
 
 0.2 Guardrails
 - [ ] Confirm we will not vendor: POTCAR libraries, Bader binary, VTST bundle
@@ -23,8 +23,8 @@ This is an execution checklist where each numbered block is intended to land as 
 
 1.2 Add Python packaging skeleton
 - [ ] Add `pyproject.toml` with `src/` layout
-- [ ] Create `src/mp1_tools/__init__.py`
-- [ ] Add minimal shared helpers in `src/mp1_tools/_shared/` (config + exit codes)
+- [ ] Create `src/mlp_tools/__init__.py`
+- [ ] Add minimal shared helpers in `src/mlp_tools/_shared/` (config + exit codes)
 
 1.3 Add entrypoints
 - [ ] Add console scripts: `mp1-id`, `mp1-energies` (stubbed OK)
@@ -32,7 +32,7 @@ This is an execution checklist where each numbered block is intended to land as 
 ## 2) Migrate `id_utilities` (Phase 1)
 
 2.1 Copy code
-- [ ] Copy legacy implementation into `src/mp1_tools/id/`
+- [ ] Copy legacy implementation into `src/mlp_tools/id/`
 - [ ] Keep CLI surface compatible (input/output options)
 
 2.2 Add docs
@@ -45,7 +45,7 @@ This is an execution checklist where each numbered block is intended to land as 
 ## 3) Migrate energetics extraction (Phase 1)
 
 3.1 Copy code
-- [ ] Copy `task_utilities/scripts/analyse/energies.py` into `src/mp1_tools/energies/`
+- [ ] Copy `task_utilities/scripts/analyse/energies.py` into `src/mlp_tools/energies/`
 - [ ] Keep CLI behavior stable initially
 
 3.2 Freeze schema contract
@@ -61,12 +61,12 @@ This is an execution checklist where each numbered block is intended to land as 
 - [ ] Document dev workflow in macro `INSTALL.md` or a dedicated `docs/tools_dev.md`
 
 4.2 Add macro repo lock file
-- [ ] Add `mp1_tools.lock` recording pinned SHA + install command
+- [ ] Add `mlp_tools.lock` recording pinned SHA + install command
 
 ## 5) Wire micro-paper repos to pinned SHA install (Option 3)
 
 5.1 Add lock file to each micro-paper repo
-- [ ] Add `mp1_tools.lock` to `mp1-1` .. `mp1-9` repos
+- [ ] Add `mlp_tools.lock` to `mp1-1` .. `mp1-9` repos
 - [ ] Add short install stanza to each `INSTALL.md`
 
 5.2 Record toolchain pinning rule
@@ -107,5 +107,5 @@ This is an execution checklist where each numbered block is intended to land as 
 ## 9) Completion criteria
 
 - [ ] MP1.1 and MP1.2 can run end-to-end using `mp1-id` + `mp1-energies` installed from pinned SHA.
-- [ ] Macro repo and micro-paper repos record toolchain pin in `mp1_tools.lock`.
+- [ ] Macro repo and micro-paper repos record toolchain pin in `mlp_tools.lock`.
 - [ ] Tooling repo has smoke tests and documented contracts.

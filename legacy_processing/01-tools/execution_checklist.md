@@ -208,4 +208,4 @@ Notes:
 
 - Created `alexanderholman/mp1-tools` from template.
 - Implemented Phase 1 package scaffold with `mp1-id` and `mp1-energies` CLIs.
-- Added macro repo dev submodule at `vendor/mp1-tools` and pinned lock file `mp1_tools.lock`.
+- Added macro repo dev submodule at `vendor/mp1-tools` and pinned lock file `mlp_tools.lock`.

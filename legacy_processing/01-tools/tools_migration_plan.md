@@ -30,7 +30,7 @@ Extract maintainable, MP1-owned tooling from legacy trees using copy-based migra
 ## Proposed `mp1-tools` repo layout
 
 - `pyproject.toml`
-- `src/mp1_tools/`
+- `src/mlp_tools/`
   - `id/` (from `id_utilities`)
   - `energies/` (from `task_utilities/scripts/analyse/energies.py`)
   - `vasp/` (from `vasp_utilities`, with `--potcar-dir` / env var)
@@ -67,7 +67,7 @@ Phase 3 (orchestration)
 ## Integration policy
 
 - Each consumer repo maintains a tiny lock file recording the pinned tools SHA:
-  - `mp1_tools.lock`
+  - `mlp_tools.lock`
 - Micro-paper repos do not add tools submodules.
 - Macro repo may carry `vendor/mp1-tools` submodule for dev only.
 
